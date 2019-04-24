@@ -22,6 +22,16 @@ git checkout .
 git clean -f
 ```
 
+### git客户端连接ssh端口不是22的git仓库 ###
+
+```bash
+git clone http://192.168.168.164:5080/FED/lvchuang-web.git
+git clone ssh://git@192.168.168.164:5022/FED/lvchuang-web.git
+```
+
+- https://blog.csdn.net/intergameover/article/details/50186239
+
 ## ref
 - https://github.com/arslanbilal/git-cheat-sheet
 - http://bilalarslan.me/git-cheat-sheet/
+- https://blog.csdn.net/intergameover/article/details/50186239
