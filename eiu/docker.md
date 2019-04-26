@@ -1,7 +1,10 @@
 ---
-title: docker
-category: docker
+title: docker-compose
+category: Devops
 layout: 2017/sheet
+prism_languages: [yaml]
+weight: -1
+updated: 2018-06-26
 ---
 
 ### 如何使用Docker加速器

@@ -37,4 +37,4 @@ branches:
 
 env:
   global:
-    - REF=github.com/eiuapp/gitlab-handbook.git # 设置 github 地址
+    - REF=github.com/eiuapp/cheatsheets.git # 设置 github 地址
