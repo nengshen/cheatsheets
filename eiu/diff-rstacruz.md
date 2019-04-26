@@ -13,11 +13,13 @@
 * _config.yml
 * _data\content.yml
 * _data/disqus.yml
+* _data/categories.yml    # 只有加入到了此文件的categories的文件，才能被搜索到哟
 * _inactive/gh.md
 * _includes\about-the-site.html
 * badges.md
 * cheatsheet-styles.md
 * index.md
+* .travis.yml    # 通过 travis 把 gh-pages 填充起来
 
 ## todo ##
 
