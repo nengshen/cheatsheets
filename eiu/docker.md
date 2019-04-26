@@ -39,5 +39,40 @@ sudo systemctl restart docker
 - https://yq.aliyun.com/articles/29941
 - https://cr.console.aliyun.com/?spm=5176.100239.blogcont29941.12.U7LEDI#/imageList
 
+### 启动Docker守护进程
+
+
+- https://blog.csdn.net/hxpjava1/article/details/80505485
+- https://blog.csdn.net/alinyua/article/details/81086124#_Docker_170
+- https://yq.aliyun.com/articles/581105
+
+#### 配置/etc/docker/daemon.json文件如下,注意,镜像地址与本文无关,可不配置
+
+因为，这里暂时不要去认证啥的，所以，只添加或修改 hosts 就行了。
+
+```bash
+{
+  "hosts": ["tcp://0.0.0.0:2376","unix:///var/run/docker.sock"],
+  "registry-mirrors": ["https://5ehijrnq.mirror.aliyuncs.com"]
+}
+```
+
+#### systemctl restart docker 报错
+
+`sudo systemctl status docker` # 这里的输出，可以找到 docker.service 文件的位置，我们这里的是 /lib/systemd/system/docker.service
+
+```bash
+vagrant@ubuntu-xenial:~$ sudo vi /lib/systemd/system/docker.service
+vagrant@ubuntu-xenial:~$ sudo systemctl daemon-reload
+vagrant@ubuntu-xenial:~$ sudo systemctl stop docker
+vagrant@ubuntu-xenial:~$ sudo systemctl start docker
+vagrant@ubuntu-xenial:~$ sudo systemctl status docker
+vagrant@ubuntu-xenial:~$ netstat -tnlp | grep 2376
+tcp6       0      0 :::2376                 :::*                    LISTEN      -
+vagrant@ubuntu-xenial:~$
+```
+
+
 ## ref
-- 
+- https://blog.csdn.net/hxpjava1/article/details/80505485
+- https://blog.csdn.net/alinyua/article/details/81086124#_Docker_170

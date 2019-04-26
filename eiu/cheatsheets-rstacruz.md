@@ -13,5 +13,19 @@ layout: 2017/sheet
 
 - https://www.html.cn/dev/
 
+### 如何在本地预览cheatsheet
+
+```bash
+which rvm && which ruby
+cd cheatsheets #				进入目录
+bundle install # https://mycyberuniverse.com/how-fix-bundler-command-not-found-jekyll.html
+which nvm && which node
+make -B _site
+ls _site
+npm i -g anywhere
+which anywhere
+anywhere -s # https://github.com/JacksonTian/anywhere/issues/35
+```
+
 ## ref
 - https://github.com/rstacruz/cheatsheets/

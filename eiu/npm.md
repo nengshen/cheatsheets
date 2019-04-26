@@ -9,7 +9,8 @@ layout: 2017/sheet
 - anywhere
 - cnpm
 - pm2
-- 
+- gitbook
+- gitbook-cli
 
 ## ref
 - https://www.npmjs.com/
