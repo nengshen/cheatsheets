@@ -51,6 +51,7 @@ names:
   - rvm
   - bash
   - solaris
+  - spacemacs
   - ubuntu
   - vagrant
   - yasnippet
