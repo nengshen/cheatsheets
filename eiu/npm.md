@@ -13,7 +13,8 @@ layout: 2017/sheet
 - gitbook-cli
 
 
-- eslint
+- eslint babel-eslint eslint-plugin-react
+- js-beautify
 
 ## ref
 - https://www.npmjs.com/

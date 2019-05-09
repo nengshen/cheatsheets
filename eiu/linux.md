@@ -43,8 +43,8 @@ https://www.jianshu.com/p/d5eb279de997
 
 ```bash
 sudo apt-get install tofrodos
-ln -s /usr/bin/todos /usr/bin/unix2dos 
-ln -s /usr/bin/fromdos /usr/bin/dos2unix 
+sudo ln -s /usr/bin/todos /usr/bin/unix2dos 
+sudo ln -s /usr/bin/fromdos /usr/bin/dos2unix 
 ```
 
 #### dos2unix ####
