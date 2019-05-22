@@ -4,6 +4,8 @@ category: spacemacs
 layout: 2017/sheet
 ---
 
+spacemacs-emacs
+
 ## How to Install Emacs 26.2 in Ubuntu: ##
 
 https://www.jianshu.com/p/612cbc1b0d63
