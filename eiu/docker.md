@@ -39,14 +39,14 @@ sudo systemctl restart docker
 - https://yq.aliyun.com/articles/29941
 - https://cr.console.aliyun.com/?spm=5176.100239.blogcont29941.12.U7LEDI#/imageList
 
-### 启动Docker守护进程
+### 启动Docker守护进程 ###
 
 
 - https://blog.csdn.net/hxpjava1/article/details/80505485
 - https://blog.csdn.net/alinyua/article/details/81086124#_Docker_170
 - https://yq.aliyun.com/articles/581105
 
-#### 配置/etc/docker/daemon.json文件如下,注意,镜像地址与本文无关,可不配置
+#### 配置/etc/docker/daemon.json文件如下,注意,镜像地址与本文无关,可不配置 ####
 
 因为，这里暂时不要去认证啥的，所以，只添加或修改 hosts 就行了。
 
@@ -57,7 +57,7 @@ sudo systemctl restart docker
 }
 ```
 
-#### systemctl restart docker 报错
+#### systemctl restart docker 报错 ####
 
 `sudo systemctl status docker` # 这里的输出，可以找到 docker.service 文件的位置，我们这里的是 /lib/systemd/system/docker.service
 
@@ -70,6 +70,24 @@ vagrant@ubuntu-xenial:~$ sudo systemctl status docker
 vagrant@ubuntu-xenial:~$ netstat -tnlp | grep 2376
 tcp6       0      0 :::2376                 :::*                    LISTEN      -
 vagrant@ubuntu-xenial:~$
+```
+
+#### 连接 Docker 守护进程 ####
+
+```bash
+DESKTOP-APB1HCJ% DOCKER_HOST=192.168.168.130:2376 docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                         PORTS               NAMES
+24aa83bb32e3        hello-world         "/hello"            About an hour ago   Exited (0) About an hour ago                       flamboyant_gauss
+DESKTOP-APB1HCJ%
+```
+
+可以在 `~/.zshrc` 中插入, 作为环境变量
+
+```bash
+DESKTOP-APB1HCJ% cat  ~/.zshrc | grep DOCKER
+export DOCKER_HOST=tcp://127.0.0.1:2375
+export DOCKER_HOST=tcp://192.168.168.130:2376
+DESKTOP-APB1HCJ%
 ```
 
 
