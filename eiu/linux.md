@@ -61,5 +61,23 @@ dos2unix ./*/*.md
 
 
 
+### linux tar压缩排除某个文件夹 ###
+
+如我们输入 tomcat/lo 的时候按tab键，命令行会自动生成 tomcat/logs/ ，对于目录，最后会多一个 “/”
+
+这里大家要注意的时候，在我们使用tar 的--exclude 命令排除打包的时候，不能加“/”，否则还是会把logs目录以及其下的文件打包进去。
+
+错误写法：
+
+```bash
+tar -zcvf tomcat.tar.gz --exclude=tomcat/logs/ --exclude=tomcat/libs/ tomcat
+```bash
+
+正确写法：
+
+```bash
+tar -zcvf tomcat.tar.gz --exclude=tomcat/logs --exclude=tomcat/libs tomcat
+```
+
 ## ref
 - 
