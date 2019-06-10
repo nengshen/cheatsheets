@@ -20,6 +20,10 @@ https://blog.csdn.net/rainbow8300/article/details/88662490
 
 关于 Access-Control-Allow-* 的设置问题.
 
+https://github.com/expressjs/cors
+https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS
+http://www.ruanyifeng.com/blog/2016/04/cors.html
+
 ### 常规写法 ###
 
 ```javascript
