@@ -57,6 +57,13 @@ https://acemerlin.github.io/posts/%E6%9D%82%E8%B0%88/2018-04-09-windows-10-bash-
 
 
 
-## ref ##
 
-- 
+
+## disable spacemacs buffer on startup
+
+https://github.com/syl20bnr/spacemacs/issues/6899#issuecomment-364684148
+
+```
+(defun dotspacemacs/user-config ()
+  (kill-buffer "*spacemacs*"))
+```
