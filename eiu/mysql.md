@@ -52,7 +52,7 @@ https://blog.csdn.net/kikajack/article/details/84668924
 http://seanlook.com/2016/10/23/mysql-utf8mb4/
 
 
-### Native for Mysql 连接阿里云数据库
+### Navicat for Mysql 连接阿里云数据库
 
 https://blog.csdn.net/wk2197727/article/details/51822352
 
