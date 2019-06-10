@@ -50,3 +50,35 @@ CREATE DATABASE IF NOT EXISTS lcnx_20190512 CHARACTER SET utf8mb4 COLLATE utf8mb
 
 https://blog.csdn.net/kikajack/article/details/84668924
 http://seanlook.com/2016/10/23/mysql-utf8mb4/
+
+
+### Native for Mysql 连接阿里云数据库
+
+https://blog.csdn.net/wk2197727/article/details/51822352
+
+
+### mysql 替换函数replace()实现mysql替换指定字段中的字符串
+
+https://blog.csdn.net/qq_36663951/article/details/78791138
+
+mysql 替换字符串的实现方法:
+
+mysql中replace函数直接替换mysql数据库中某字段中的特定字符串，不再需要自己写函数去替换，用起来非常的方便。 mysql 替换函数replace()
+ 
+```
+UPDATE `table_name` SET `field_name` = replace (`field_name`,'from_str','to_str') WHERE `field_name` LIKE '%from_str%'
+```
+说明：
+- table_name  表的名字
+- field_name  字段名
+- from_str  需要替换的字符串
+- to_str  替换成的字符串
+
+例如：
+
+```
+mysql> SELECT REPLACE('www.lvtao.net', 'www', 'http://www');
+```
+-> 'https://www.lvtao.net'
+
+该函数是多字节安全的,也就是说你不用考虑是中文字符还是英文字符.
