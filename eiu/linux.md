@@ -4,6 +4,13 @@ category: Linux
 layout: 2017/sheet
 ---
 
+### service 配置马上生效
+
+```bash
+sudo vim /etc/systemd/system/shadowsocks.service
+sudo systemctl enable /etc/systemd/system/shadowsocks.service 
+```
+
 ### How to fix “Package is in a very bad inconsistent state” error? ###
 
 https://askubuntu.com/questions/148715/how-to-fix-package-is-in-a-very-bad-inconsistent-state-error
@@ -78,6 +85,19 @@ tar -zcvf tomcat.tar.gz --exclude=tomcat/logs/ --exclude=tomcat/libs/ tomcat
 ```bash
 tar -zcvf tomcat.tar.gz --exclude=tomcat/logs --exclude=tomcat/libs tomcat
 ```
+
+### useradd ###
+
+#### Linux创建用户并指定目录为根目录
+
+https://blog.csdn.net/qq_24909089/article/details/81068112
+
+```bash
+sudo useradd -d /mnt/c/Users/a/wsl/home/s/ -m s
+sudo passwd s
+su - s
+```
+
 
 ## ref
 - 
