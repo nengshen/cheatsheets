@@ -128,3 +128,9 @@ pm2 stop index # && pm2 start ecosystem.config.js --only index && pm2 logs index
 
 
 
+
+## pm2设置开机自启动命令
+
+- pm2 startup，这个命令会在系统 `/etc/systemd/system/` 路径下生成一个 `pm2-root.service` 文件用来开机启动 pm2 服务。
+- pm2 save, 保存当前 pm2 运行的各个应用保存到 `/root/.pm2/dump.pm2` 下，开机重启时读取该文件中的内容启动相关应用。
+
