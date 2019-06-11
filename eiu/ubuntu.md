@@ -120,6 +120,24 @@ tcp6       0      0 :::2376                 :::*                    LISTEN      
 ubuntu@utuntu:~$
 ```
 
+##### (可选, 视情况)统一配置container dns
+
+```bash
+ubuntu@utuntu:~$ cat /etc/docker/daemon.json 
+{                                                               
+	"hosts": ["tcp://0.0.0.0:2376","unix:///var/run/docker.sock"],
+	"registry-mirrors": ["https://0d6wdn2y.mirror.aliyuncs.com"],
+	"dns" : ["192.168.168.222"]
+}                                                               
+ubuntu@utuntu:~$ sudo systemctl restart docker
+```
+
+##### docker与ufw配合
+
+https://blog.36web.rocks/2016/07/08/docker-behind-ufw.html
+
+或者出了问题, 参考一下 http://github.com/eiuapp/linux-handbook
+
 ### ubuntu之设置时区和在线同步时间 ###
 
 https://blog.csdn.net/w786572258/article/details/51248053
