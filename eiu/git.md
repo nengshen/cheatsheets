@@ -51,7 +51,31 @@ git config --global core.filemode false
 https://stackoverflow.com/questions/1257592/how-do-i-remove-files-saying-old-mode-100755-new-mode-100644-from-unstaged-cha
 https://blog.csdn.net/ai2000ai/article/details/79628896
 
-### git
+### Git 查询某次历史提交的修改内容 ###
+
+我们首先
+
+git log显示历史的提交列表：
+
+git show <commit-hashId> 便可以显示某次提交的修改内容
+
+同样 git show <commit-hashId> filename 可以显示某次提交的某个内容的修改信息。
+
+
+
+### Git获取Commit修改文件列表 ###
+
+
+```bash
+git diff --name-only HEAD~ HEAD
+git diff --name-only HEAD~3 HEAD
+```
+
+### 查看文件最近n次提交的修改 ###
+
+```bash
+git log -p -2 src/components/tabView/efficiency/CompanyAssess.vue
+```
 
 ## ref
 - https://github.com/arslanbilal/git-cheat-sheet
