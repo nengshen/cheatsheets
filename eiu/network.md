@@ -82,3 +82,6 @@ https://github.com/sdcxyz/docker-shadowsocks
 - http://einverne.github.io/post/2018/03/privoxy-forward-socks-to-http.html
 
 
+## https ##
+
+[使用 Certbot 为网站设置永久免费的 HTTPS 证书](https://jimmysong.io/posts/free-certificates-with-certbot/)

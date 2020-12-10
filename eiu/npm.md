@@ -13,9 +13,29 @@ layout: 2017/sheet
 - gitbook-cli
 - gitignore-to-dockerignore
 
+### 代码美化
+
+- js-beautify
+
+### 代码检查
 
 - eslint babel-eslint eslint-plugin-react
-- js-beautify
+- standard
+
+### 代码测试
+
+- mocha
+- supertest
+- mochawesome
+- should
+- istanbul
+
+### git集成
+
+- husky
+- lint-staged
+
+
 
 ## ref
 - https://www.npmjs.com/

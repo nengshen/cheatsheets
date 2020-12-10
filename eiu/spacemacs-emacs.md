@@ -67,3 +67,8 @@ https://github.com/syl20bnr/spacemacs/issues/6899#issuecomment-364684148
 (defun dotspacemacs/user-config ()
   (kill-buffer "*spacemacs*"))
 ```
+
+
+## Linux下emacs如何如X-Window系统共享剪贴板
+
+http://www.aiuxian.com/article/p-823990.html
